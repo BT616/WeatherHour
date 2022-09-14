@@ -70,7 +70,7 @@ searchForm.addEventListener('submit',function(event){
     
 var search = searchInput.value.trim();
 
-var apiURL = `http://api.openweathermap.org/geo/1.0/direct?q=${search}&limit=5&appid=3ba1140067fb712eece541195bb90a76`
+var apiURL = `https://api.openweathermap.org/geo/1.0/direct?q=${search}&limit=5&appid=3ba1140067fb712eece541195bb90a76`
 
 fetch(apiURL).then(function(response){
     return response.json();
