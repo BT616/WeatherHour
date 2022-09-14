@@ -16,14 +16,24 @@ h3{
 
 }
 
-#current-weather h1{
+div{
+    display: inline-block;
+    padding: 5px;
+    max-width: 100%;
+}
 
+input{
+    position: relative;
+    width: 100%;
+}
+.container{
+   
+    border: solid black;
+}
+
+
+#current-weather h1{
     font-size: 50px;
 
 }
 
-div{
-    display: inline-block;
-    padding: 5px;
-    max-width: 50%;
-}

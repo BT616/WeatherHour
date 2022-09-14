@@ -14,21 +14,36 @@ function fetchWeather(lat,lon,city){
 }).then(function(data){
 
    
-
+// gets elements to page. mph, city name, temp 
 var currentCity = document.createElement("h1")
 var currentWeather =document.getElementById("current-weather");
 currentCity.textContent= city;
 currentWeather.append(currentCity);
 
 var tempF = data.main.temp;
+var humidity = data.main.humidity;
+var wind = data.wind.speed;
+
+var currentWind = document.createElement("p");
+var currentWeather = document.getElementById("current-weather");
+currentWind.textContent= `Wind: ${wind} MPH`;
+currentWeather.appendChild(currentWind);
+
+var currentHumidity = document.createElement("p");
+var currentWeather = document.getElementById("current-weather");
+currentHumidity.textContent = `Humidity:${humidity} %`;
+currentWeather.appendChild(currentHumidity);
+
 
 
 var currentTemp = document.createElement("p");
 var currentWeather= document.getElementById("current-weather");
-currentTemp.textContent = `TEMP: ${tempF} F`;
+currentTemp.textContent = `Temp: ${tempF} F`;
 currentWeather.appendChild(currentTemp);
 
 
+
+//
 var forecast= document.createElement("h1")
 var currentForecastContainer=document.getElementById("current-forecast");
 forecast.textContent="5 day Forecast";
@@ -37,15 +52,15 @@ currentForecastContainer.appendChild(forecast);
 var dailyForecast = data.daily;
 
 for(var i= 0; i <dailyForecast.length; i++){
-    var currentForestTemp = document.createElement("p");
-    currentForestTemp.textContent = `Temp: ${dailyForecast[i].temp.day}`
-    currentForecastContainer.appendChild(currentForestTemp);
+    var currentForcastTemp = document.createElement("p");
+    currentForcastTemp.textContent = `Temp: ${dailyForecast[i].temp.day}`
+    currentForecastContainer.appendChild(currentForcastTemp);
 
     var currentForecastWind=document.createElement("p");
     currentForecastContainer.appendChild(currentForecastWind);
 }
 
- })
+})
 }
 
 
