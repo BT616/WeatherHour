@@ -16,19 +16,15 @@ h3{
 
 }
 
-div{
-    display: inline-block;
-    padding: 5px;
-    max-width: 100%;
-}
+
 
 input{
     position: relative;
     width: 100%;
 }
-.container{
-   
-    border: solid black;
+#current-weather{
+    margin-top: 10px;;
+    border: solid 1px black;
 }
 
 
@@ -37,3 +33,14 @@ input{
 
 }
 
+.seperator{
+height:2px;
+background: blueviolet;
+margin: 10px 0;
+box-shadow: 0px 0px 0px 5px 2px rgba(red, green, blue, alpha);
+}
+
+.btn{
+    margin-top: 10px;
+   width: 100%;
+}
