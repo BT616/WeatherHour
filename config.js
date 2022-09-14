@@ -1,1 +1,1 @@
-const API_KEY = "3ba1140067fb712eece541195bb90a76"
+const API_KEY = `3ba1140067fb712eece541195bb90a76`
